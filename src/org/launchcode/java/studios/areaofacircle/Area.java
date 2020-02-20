@@ -11,24 +11,25 @@ public class Area {
         Scanner in = new Scanner(System.in);
         int i = 0;
         boolean isNegative = true;
+        boolean noInput = true;
         do{
             System.out.println("Enter the radius");
             String  r = in.next();
             if(!isNumber(r)|| r.isEmpty()){
-                break;
+                noInput = true;
             }
             else if(isNumber(r)){
                 if(Character.isDigit(r.charAt(0))){
                     System.out.println("The area of a circle of radius " + r +" is: " + Circle.getArea(Double.parseDouble(r)));
-                    isNegative = false;
+                    noInput = false;
                 }
                 else if(r.charAt(0)!='-'){
-                    break;
+                    noInput = true;
                 }
 
             }
             i++;
-        }while(isNegative);
+        }while(noInput);
 
 
     }

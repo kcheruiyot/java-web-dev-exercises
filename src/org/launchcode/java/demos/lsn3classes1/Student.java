@@ -51,4 +51,7 @@ public class Student {
     private int numberOfCredits = 0;
     private double gpa = 0.0;
 
+    public static void main(String[] args) {
+
+    }
 }

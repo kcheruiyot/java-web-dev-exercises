@@ -17,11 +17,12 @@ public class CharCount {
                 "pretty straightforward from there";
         */
        String s = "";
-        java.io.File inputData = new java.io.File("../java-web-dev-exercises/src/org/launchcode/java/studios/charactercount/string.txt");
-        Scanner input = new Scanner(inputData);
+        java.io.File file = new java.io.File("../java-web-dev-exercises/src/org/launchcode/java/studios/charactercount/string.txt");
+        Scanner input = new Scanner(file);
         while (input.hasNext()) {
             s += input.nextLine();
         }
+        input.close();
         System.out.println(s);
         int stringLength = s.length();
         char c;
